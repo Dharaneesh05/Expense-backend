@@ -10,7 +10,7 @@ app.use(express.json());
 
 const mongoURI = "mongodb+srv://dharaneeshc2006:dharaneesh@cluster0.dtqhv49.mongodb.net/expense?retryWrites=true&w=majority&appName=Cluster0";
 
-mongoose.connect(mongoURI, {useNewUrlParser: true,useUnifiedTopology: true,})
+mongoose.connect(mongoURI)
 .then(() => console.log('MongoDB connected'))
 .catch((err) => console.error('MongoDB connection error:', err));
 
