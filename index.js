@@ -5,7 +5,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
-app.use(cors());
+app.use(cors({
+  origin: 'https://vite-project-7h81d1qbo-dharaneeshc23aid-konguedus-projects.vercel.app',
+  methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+}));
 app.use(express.json());
 
 const mongoURI = "mongodb+srv://dharaneeshc2006:dharaneesh@cluster0.dtqhv49.mongodb.net/expense?retryWrites=true&w=majority&appName=Cluster0";
